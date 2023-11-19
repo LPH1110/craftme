@@ -1,0 +1,32 @@
+.report_card {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: white;
+}
+
+.report_card_heading {
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.5rem; /* 40px */
+  margin-bottom: 0.5rem;
+}
+
+.report_card_content {
+  color: rgb(209 213 219);
+}
+
+.report_card + .report_card {
+  ::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #cbc9c959;
+  }
+}
