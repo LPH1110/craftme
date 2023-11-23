@@ -3,20 +3,7 @@
 import { useSectionInView } from "@/lib/hooks";
 import React from "react";
 import { motion } from "framer-motion";
-
-const fadeInVariants = {
-  initial: {
-    opacity: 0,
-    x: -100,
-  },
-  animate: (index: number) => ({
-    opacity: 1,
-    x: 0,
-    transition: {
-      delay: 0.2 * index,
-    },
-  }),
-};
+import { fadeInLeftVariants } from "@/lib/animate";
 
 const Intro = () => {
   const { ref } = useSectionInView("Home", 0.75);
@@ -32,7 +19,7 @@ const Intro = () => {
           <div className="max-w-lg text-white h-full flex flex-col items-start justify-center gap-6 col-span-2">
             <motion.div
               custom={0}
-              variants={fadeInVariants}
+              variants={fadeInLeftVariants}
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
@@ -44,7 +31,7 @@ const Intro = () => {
             </motion.div>
             <motion.div
               custom={1}
-              variants={fadeInVariants}
+              variants={fadeInLeftVariants}
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
@@ -57,7 +44,7 @@ const Intro = () => {
             </motion.div>
             <motion.button
               custom={2}
-              variants={fadeInVariants}
+              variants={fadeInLeftVariants}
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}

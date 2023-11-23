@@ -1,5 +1,9 @@
+"use client";
+
 import React from "react";
 import Logo from "../logo";
+import { motion } from "framer-motion";
+import { fadeInTop } from "@/lib/animate";
 
 const Footer = () => {
   return (

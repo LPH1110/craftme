@@ -1,37 +1,11 @@
 "use client";
 
-import React, { Fragment } from "react";
-import ServiceCard from "./serviceCard";
+import { fadeInRight, fadeInTopVariants } from "@/lib/animate";
 import { servicesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
-
-const fadeInRight = {
-  initial: {
-    x: 100,
-    opacity: 0,
-  },
-
-  animate: {
-    x: 0,
-    opacity: 1,
-  },
-};
-
-const fadeInVariants = {
-  initial: {
-    y: 100,
-    opacity: 0,
-  },
-
-  animate: (index: number) => ({
-    y: 0,
-    opacity: 1,
-    transition: {
-      delay: 0.3 * index,
-    },
-  }),
-};
+import { Fragment } from "react";
+import ServiceCard from "./serviceCard";
 
 const ServiceIntro = () => {
   return (
@@ -79,7 +53,7 @@ const Services = () => {
             {servicesData.map((service, index) => (
               <Fragment key={service.id}>
                 <motion.div
-                  variants={fadeInVariants}
+                  variants={fadeInTopVariants}
                   viewport={{ once: true }}
                   initial="initial"
                   whileInView="animate"

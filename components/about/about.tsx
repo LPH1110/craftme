@@ -1,11 +1,17 @@
 "use client";
 
+import { fadeInLeft, scaleUp } from "@/lib/animate";
 import { useSectionInView } from "@/lib/hooks";
-import React from "react";
+import { motion } from "framer-motion";
 
 const AboutIntro = () => {
   return (
-    <div>
+    <motion.div
+      variants={fadeInLeft}
+      viewport={{ once: true }}
+      initial="initial"
+      whileInView="animate"
+    >
       <div className="flex flex-col md:items-center lg:items-start justify-between gap-6 max-w-[36rem]">
         <div className="flex items-center gap-4">
           <span className="h-0.5 w-20 bg-sea rounded-lg"></span>
@@ -27,7 +33,7 @@ const AboutIntro = () => {
           Learn more
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -42,7 +48,14 @@ const About = () => {
           <div className="flex items-center justify-center">
             <AboutIntro />
           </div>
-          <div className="intro-bg intro-bg-2"></div>
+          <motion.div
+            variants={scaleUp}
+            viewport={{ once: true }}
+            initial="initial"
+            whileInView="animate"
+          >
+            <div className="intro-bg intro-bg-2"></div>
+          </motion.div>
         </div>
       </div>
     </section>

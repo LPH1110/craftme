@@ -20,18 +20,25 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { delay } from "framer-motion";
+import { motion } from "framer-motion";
+import { fadeInLeft, fadeInTopVariants } from "@/lib/animate";
 
 const FeedBacks = () => {
   return (
     <section className="scroll-mt-28 w-full px-8 my-28">
       <div className="container">
         <div className="space-y-12">
-          <div className="flex items-center md:justify-center lg:justify-start">
+          <motion.div
+            variants={fadeInLeft}
+            viewport={{ once: true }}
+            initial="initial"
+            whileInView="animate"
+            className="flex items-center md:justify-center lg:justify-start"
+          >
             <h1 className="font-bold text-5xl text-blue md:text-center lg:text-left max-w-[32rem] leading-snug">
               Beloved by so many people worldwide.
             </h1>
-          </div>
+          </motion.div>
           <div>
             <Swiper
               modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}

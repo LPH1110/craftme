@@ -1,12 +1,11 @@
-import { v4 as uuidv4 } from "uuid";
 import {
-  ResearchIcon,
-  DesignIcon,
   BrandingIcon,
+  DesignIcon,
   DevelopmentIcon,
+  ResearchIcon,
 } from "@/icons";
 import React from "react";
-import images from "@/public/images";
+import { v4 as uuidv4 } from "uuid";
 
 export const servicesData = [
   {
