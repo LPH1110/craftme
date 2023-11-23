@@ -11,7 +11,7 @@ const AboutIntro = () => {
           <span className="h-0.5 w-20 bg-sea rounded-lg"></span>
           <span className="text-sea text-lg font-semibold">Who we are</span>
         </div>
-        <h1 className="font-bold text-5xl text-blue md:text-center lg:text-left">
+        <h1 className="leading-tight font-bold text-5xl text-blue md:text-center lg:text-left">
           Providing creative and technology services for growing brands.
         </h1>
         <div className="h-0.5 w-full bg-light-gray rounded-lg"></div>

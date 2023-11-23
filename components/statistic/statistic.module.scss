@@ -16,17 +16,3 @@
 .report_card_content {
   color: rgb(209 213 219);
 }
-
-.report_card + .report_card {
-  ::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    width: 1px;
-    height: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #cbc9c959;
-  }
-}

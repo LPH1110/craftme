@@ -28,6 +28,7 @@ module.exports = {
       "semi-gray": "rgb(107 114 128)",
       desc: "rgb(209 213 219)",
       "card-border": "rgb(229 231 235)",
+      transparent: "transparent",
     },
   },
   plugins: [],

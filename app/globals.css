@@ -20,11 +20,42 @@ html {
   background-position: center;
   padding-top: 100%;
 }
-  
+
 .intro-bg-1 {
   background-image: url(https://res.cloudinary.com/dzzv49yec/image/upload/v1700371335/intro1_xjim8g.png);
 }
 
 .intro-bg-2 {
   background-image: url(https://res.cloudinary.com/dzzv49yec/image/upload/v1700414919/intro2_smo4hb.png);
+}
+
+.intro-bg-3 {
+  background-image: url(https://res.cloudinary.com/dzzv49yec/image/upload/v1700464023/intro3_iornwz.png);
+}
+
+.flex_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.swiper-pagination {
+  position: unset !important;
+  padding: 3rem 0 !important;
+}
+
+.my-bullet {
+  background: #b4b3b3;
+  opacity: 1;
+  display: inline-block;
+  border-radius: 100%;
+  padding: 0.3rem;
+}
+
+.my-bullet + .my-bullet {
+  margin-left: 0.5rem;
+}
+
+.my-bullet-active {
+  background: #ffba08;
 }

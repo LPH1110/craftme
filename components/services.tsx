@@ -4,16 +4,49 @@ import React, { Fragment } from "react";
 import ServiceCard from "./serviceCard";
 import { servicesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
+import { motion } from "framer-motion";
+
+const fadeInRight = {
+  initial: {
+    x: 100,
+    opacity: 0,
+  },
+
+  animate: {
+    x: 0,
+    opacity: 1,
+  },
+};
+
+const fadeInVariants = {
+  initial: {
+    y: 100,
+    opacity: 0,
+  },
+
+  animate: (index: number) => ({
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: 0.3 * index,
+    },
+  }),
+};
 
 const ServiceIntro = () => {
   return (
-    <div>
+    <motion.div
+      variants={fadeInRight}
+      viewport={{ once: true }}
+      initial="initial"
+      whileInView="animate"
+    >
       <div className="flex flex-col md:items-center lg:items-start justify-between gap-6 max-w-[36rem]">
         <div className="flex items-center gap-4">
           <span className="h-0.5 w-20 bg-sea rounded-lg"></span>
           <span className="text-sea text-lg font-semibold">Services</span>
         </div>
-        <h1 className="font-bold text-5xl text-blue md:text-center lg:text-left">
+        <h1 className="leading-tight font-bold text-5xl text-blue md:text-center lg:text-left">
           We can help you solve your problem through our services.
         </h1>
         <div className="h-0.5 w-full bg-light-gray rounded-lg"></div>
@@ -28,7 +61,7 @@ const ServiceIntro = () => {
           Explore services
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -43,13 +76,21 @@ const Services = () => {
             <ServiceIntro />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {servicesData.map((service) => (
+            {servicesData.map((service, index) => (
               <Fragment key={service.id}>
-                <ServiceCard
-                  title={service.title}
-                  description={service.description}
-                  icon={service.icon}
-                />
+                <motion.div
+                  variants={fadeInVariants}
+                  viewport={{ once: true }}
+                  initial="initial"
+                  whileInView="animate"
+                  custom={index}
+                >
+                  <ServiceCard
+                    title={service.title}
+                    description={service.description}
+                    icon={service.icon}
+                  />
+                </motion.div>
               </Fragment>
             ))}
           </div>

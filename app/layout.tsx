@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`bg-gray-100 dark:bg-gray-700 dark:text-gray-300 text-gray-700 transition-all h-[10000px]`}
+        className={`bg-gray-100 dark:bg-gray-700 dark:text-gray-300 text-gray-700 transition-all`}
       >
         <ThemeContextProvider>
           <ActiveSectionProvider>{children}</ActiveSectionProvider>

@@ -1,19 +1,42 @@
 "use client";
 
 import Link from "next/link";
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useRef } from "react";
 import { FaBars } from "react-icons/fa";
 import { Logo } from "@/components";
 import { links } from "@/lib/data";
 import { useActiveSectionContext } from "@/lib/hooks";
 import clsx from "clsx";
+import { Popover } from "@headlessui/react";
+import MobileNavbar from "./mobileNavbar";
 
 const Header = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
+  const headerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleWindowScroll = () => {
+      if (headerRef.current) {
+        if (window.scrollY > 20) {
+          headerRef.current.classList.add("shadow-xl");
+        } else {
+          headerRef.current.classList.remove("shadow-xl");
+        }
+      }
+    };
+    window.addEventListener("scroll", handleWindowScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleWindowScroll);
+    };
+  });
   return (
     <header className="z-[999] relative">
-      <div className="px-8 fixed top-0 inset-x-0 bg-blue text-white flex justify-center items-center shadow-lg">
+      <div
+        ref={headerRef}
+        className="px-8 fixed top-0 inset-x-0 bg-blue text-white flex justify-center items-center transition"
+      >
         <div className="container flex items-center justify-between h-[4.5rem]">
           <div className="flex items-center gap-3 min-h-full">
             <div className="w-7">
@@ -22,7 +45,7 @@ const Header = () => {
             <h2 className="font-bold text-2xl">Craft.me</h2>
           </div>
           {/* Desktop */}
-          <div className="hidden md:flex items-center gap-12">
+          <div className="hidden lg:flex items-center gap-12">
             <nav className="flex items-center justify-between h-full">
               <ul className="flex items-center justify-center gap-12">
                 {links.map((link) => (
@@ -53,9 +76,7 @@ const Header = () => {
             </Link>
           </div>
           {/* Mobile */}
-          <button className="md:hidden" type="button">
-            <FaBars className="w-6 h-6" />
-          </button>
+          <MobileNavbar />
         </div>
       </div>
     </header>
