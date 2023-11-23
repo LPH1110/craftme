@@ -8,7 +8,7 @@ import { links } from "@/lib/data";
 import { useActiveSectionContext } from "@/lib/hooks";
 import clsx from "clsx";
 import { Popover } from "@headlessui/react";
-import MobileNavbar from "./mobileNavbar";
+import MobileNavbar from "../mobileNavbar";
 
 const Header = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
