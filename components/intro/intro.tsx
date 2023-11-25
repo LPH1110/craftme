@@ -3,7 +3,12 @@
 import { useSectionInView } from "@/lib/hooks";
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeInLeftVariants } from "@/lib/animate";
+import { fadeInLeftVariants, scaleUp } from "@/lib/animate";
+import intro1 from "../../public/images/intro1.png";
+
+const introBgStyle = {
+  backgroundImage: `url(${intro1.src})`,
+};
 
 const Intro = () => {
   const { ref } = useSectionInView("Home", 0.75);
@@ -54,10 +59,12 @@ const Intro = () => {
             </motion.button>
           </div>
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="block intro-bg intro-bg-1 lg:col-span-3"
+            variants={scaleUp}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            style={introBgStyle}
+            className="block intro-bg lg:col-span-3"
           ></motion.div>
         </div>
       </div>

@@ -31,18 +31,6 @@ html *::-webkit-scrollbar-track {
   padding-top: 50%;
 }
 
-.intro-bg-1 {
-  background-image: url(https://res.cloudinary.com/dzzv49yec/image/upload/v1700371335/intro1_xjim8g.png);
-}
-
-.intro-bg-2 {
-  background-image: url(https://res.cloudinary.com/dzzv49yec/image/upload/v1700414919/intro2_smo4hb.png);
-}
-
-.intro-bg-3 {
-  background-image: url(https://res.cloudinary.com/dzzv49yec/image/upload/v1700464023/intro3_iornwz.png);
-}
-
 .flex_between {
   display: flex;
   justify-content: space-between;

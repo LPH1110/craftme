@@ -61,7 +61,9 @@ export const fadeInTopVariants = {
     y: 0,
     opacity: 1,
     transition: {
-      delay: 0.3 * index,
+      type: "spring",
+      bounce: 0.5,
+      delay: 0.2 * index,
     },
   }),
 };
@@ -75,7 +77,10 @@ export const fadeInLeftVariants = {
     opacity: 1,
     x: 0,
     transition: {
+      type: "spring",
+      bounce: 0.5,
       delay: 0.3 * index,
+      duration: 1.25,
     },
   }),
 };
@@ -91,7 +96,7 @@ export const scaleUp: Variants = {
     transition: {
       type: "spring",
       bounce: 0.5,
-      duration: 1,
+      duration: 1.25,
     },
   },
 };

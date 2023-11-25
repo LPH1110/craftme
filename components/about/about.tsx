@@ -3,6 +3,11 @@
 import { fadeInLeft, scaleUp } from "@/lib/animate";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
+import intro2 from "@/public/images/intro2.png";
+
+const introBgStyle = {
+  backgroundImage: `url(${intro2.src})`,
+};
 
 const AboutIntro = () => {
   return (
@@ -54,7 +59,7 @@ const About = () => {
             initial="initial"
             whileInView="animate"
           >
-            <div className="intro-bg intro-bg-2"></div>
+            <div style={introBgStyle} className="intro-bg"></div>
           </motion.div>
         </div>
       </div>
