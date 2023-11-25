@@ -1,4 +1,3 @@
-import NotFoundIcon from "@/icons/notFoundIcon";
 import svgs from "@/public/svgs";
 import Image from "next/image";
 import Link from "next/link";
