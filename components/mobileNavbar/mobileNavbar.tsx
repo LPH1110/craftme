@@ -11,7 +11,7 @@ const MobileNavbar = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
   return (
-    <div className="relative md:hidden">
+    <div className="relative lg:hidden">
       <button type="button" onClick={() => setOpen(!open)}>
         <FaBars className="w-6 h-6" />
       </button>
@@ -25,7 +25,7 @@ const MobileNavbar = () => {
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-1"
       >
-        <div className="bg-white rounded-xl shadow-lg absolute right-0 p-4 max-w-sm w-screen">
+        <div className="bg-white rounded-xl shadow-lg absolute right-0 p-4 min-w-[16rem]">
           <ul className="w-full">
             {links.map((link) => (
               <Fragment key={link.hash}>

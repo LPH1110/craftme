@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 type ProjectCardProps = {
@@ -22,19 +23,20 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           backgroundImage: `url(${projectThumb})`,
         }}
       ></div>
-      <div className="lg:flex items-center justify-between space-y-6 p-6">
+      <div className="flex flex-col lg:flex-row items-center justify-between space-y-6 p-6 lg:gap-4">
         <div className="space-y-2">
           <h4 className="font-semibold text-xl">{project.projectName}</h4>
           <p className="text-semi-gray text-sm">
             {project.service} . {project.publishedDate}
           </p>
         </div>
-        <button
-          className="w-full lg:max-w-[10rem] py-3 px-10 rounded-full bg-mountain text-white hover:shadow-lg transition-all"
-          type="button"
+        <Link
+          href={`/projects/${project.id}`}
+          target="_blank"
+          className="w-full lg:max-w-[10rem] py-3 px-10 text-center rounded-full bg-mountain text-white hover:shadow-lg transition-all"
         >
           See project
-        </button>
+        </Link>
       </div>
     </div>
   );

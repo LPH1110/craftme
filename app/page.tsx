@@ -12,7 +12,7 @@ import {
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-start overflow-x-hidden">
+    <main className="flex flex-col items-center justify-start">
       <Header />
       <Intro />
       <Services />

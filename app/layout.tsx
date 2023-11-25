@@ -2,6 +2,7 @@ import ThemeContextProvider from "@/context/themeContext";
 import ActiveSectionProvider from "@/context/activeSectionContext";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { Footer, Header } from "@/components";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,9 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`bg-gray-100 dark:bg-gray-700 dark:text-gray-300 text-gray-700 transition-all`}
-      >
+      <body className="bg-gray-100 text-gray-700 transition-all overflow-x-hidden">
         <ThemeContextProvider>
           <ActiveSectionProvider>{children}</ActiveSectionProvider>
         </ThemeContextProvider>

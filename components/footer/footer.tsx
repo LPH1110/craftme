@@ -7,7 +7,7 @@ import { fadeInTop } from "@/lib/animate";
 
 const Footer = () => {
   return (
-    <section id="footer" className="px-8 py-4 bg-blue w-full">
+    <footer id="footer" className="px-8 py-4 bg-blue w-full">
       <div className="container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-3 min-h-full">
@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   );
 };
 
