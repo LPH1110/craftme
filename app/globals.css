@@ -18,17 +18,11 @@ html *::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.background-image {
-  padding-top: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .intro-bg {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  padding-top: 50%;
+  padding-top: 100%;
 }
 
 .flex_between {

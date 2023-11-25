@@ -6,13 +6,12 @@ import {
   Services,
   Statistic,
   FeedBacks,
-  Contact,
   Footer,
 } from "@/components";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-start">
+    <main className="flex flex-col items-center justify-start relative z-[900] mb-[38rem] md:mb-[26rem]">
       <Header />
       <Intro />
       <Services />
@@ -20,8 +19,9 @@ export default function Home() {
       <About />
       <Projects />
       <FeedBacks />
-      <Contact />
-      <Footer />
+      <div className="fixed bottom-0 w-full -z-[1]">
+        <Footer />
+      </div>
     </main>
   );
 }

@@ -46,7 +46,11 @@ const About = () => {
   const { ref } = useSectionInView("About us");
 
   return (
-    <section ref={ref} id="about" className="px-8 my-28 w-full scroll-mt-28">
+    <section
+      ref={ref}
+      id="about"
+      className="min-h-screen py-28 lg:py-0 px-8 w-full bg-white flex items-center justify-center"
+    >
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-6">
           {/* Desktop */}

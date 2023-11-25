@@ -35,12 +35,12 @@ const Header = () => {
       className="px-8 z-[999] fixed inset-x-0 top-0 bg-blue text-white flex justify-center items-center transition"
     >
       <div className="container flex items-center justify-between h-[4.5rem]">
-        <div className="flex items-center gap-3 min-h-full">
+        <Link href="/" className="flex items-center gap-3 min-h-full">
           <div className="w-7">
             <Logo />
           </div>
           <h2 className="font-bold text-2xl">Craft.me</h2>
-        </div>
+        </Link>
         {/* Desktop */}
         <div className="hidden lg:flex items-center gap-12">
           <nav className="flex items-center justify-between h-full">

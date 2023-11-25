@@ -4,7 +4,7 @@ import { useSectionInView } from "@/lib/hooks";
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeInLeftVariants, scaleUp } from "@/lib/animate";
-import intro1 from "../../public/images/intro1.png";
+import intro1 from "@/public/svgs/intro1.svg";
 
 const introBgStyle = {
   backgroundImage: `url(${intro1.src})`,
@@ -16,11 +16,11 @@ const Intro = () => {
     <section
       ref={ref}
       id="home"
-      className="px-8 pb-8 mt-[4.5rem] w-full scroll-mt-28 bg-blue flex items-center justify-center"
+      className="px-8 min-h-screen pt-28 lg:pt-0 w-full bg-blue flex items-center justify-center"
     >
       <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-5">
-          <div className="py-8 mx-auto lg:mx-0 max-w-lg text-white h-full flex flex-col items-start md:items-center lg:items-start justify-center gap-6 col-span-2">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
+          <div className="mx-auto lg:mx-0 max-w-lg text-white h-full flex flex-col items-start md:items-center lg:items-start justify-center gap-6 col-span-2">
             <motion.div
               custom={0}
               variants={fadeInLeftVariants}

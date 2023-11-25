@@ -1,31 +1,30 @@
 "use client";
 
-import React, { Fragment } from "react";
-import FeedBackCard from "../feedBackCard";
 import { feedBacksData } from "@/lib/data";
+import { Fragment } from "react";
+import FeedBackCard from "../feedBackCard";
 
 // Import Swiper React components
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import {
+  A11y,
+  Autoplay,
   Navigation,
   Pagination,
   Scrollbar,
-  A11y,
-  Autoplay,
 } from "swiper/modules";
-import SwiperCore from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
+import { fadeInLeft } from "@/lib/animate";
+import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { motion } from "framer-motion";
-import { fadeInLeft, fadeInTopVariants } from "@/lib/animate";
 
 const FeedBacks = () => {
   return (
-    <section className="scroll-mt-28 w-full px-8 my-28">
+    <section className="min-h-screen flex items-center justify-center w-full px-8 py-28 bg-white shadow-2xl">
       <div className="container">
         <div className="space-y-12">
           <motion.div

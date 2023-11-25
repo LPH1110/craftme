@@ -3,8 +3,8 @@
 import { fadeInRight, fadeInTopVariants } from "@/lib/animate";
 import { servicesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-import { motion } from "framer-motion";
-import { Fragment } from "react";
+import { motion, useScroll } from "framer-motion";
+import { Fragment, useRef } from "react";
 import ServiceCard from "./serviceCard";
 
 const ServiceIntro = () => {
@@ -41,8 +41,14 @@ const ServiceIntro = () => {
 
 const Services = () => {
   const { ref } = useSectionInView("Services");
+  console.log(ref);
+
   return (
-    <section ref={ref} id="services" className="px-8 my-28 scroll-mt-28 w-full">
+    <section
+      ref={ref}
+      id="services"
+      className="px-8 min-h-screen py-28 lg:py-0 w-full bg-white flex items-center justify-center"
+    >
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-6">
           {/* Mobile */}
